@@ -29,7 +29,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 3. from within cloned directory run `run_analysis.R`, this will:
  * download datafile zip and run the analysis.
   * Run from R/Rstudio on windows, mac, linux:
-     Open R or Rstudio set your working directory `setwd("your\path\to\cloned\directory")
+     Open R or Rstudio set your working directory `setwd("your\path\to\cloned\directory")`
      
      run analysis `source("run_analysis.R")`
 
@@ -38,5 +38,5 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
      
      `R CMD BATCH run_analysis.R`
 
-###Final Analyssis Output:
+###Final Analysis Output:
 * activity_analysis_tidy_dataset.txt (tab delimited text)
