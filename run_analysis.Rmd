@@ -1,0 +1,73 @@
+run_analysis
+========================================================
+```{r sessionInfo, include=TRUE, echo=TRUE, results='markup'}
+sessionInfo()
+```
+
+This script is for the Coursera course "Getting and Cleaning Data"
+
+Please see readme.md and codebook.md for further details
+
+Created by Garret Wais https://github.com/glw/activity_analysis
+
+
+# Part 1 - Download and extract data.
+
+### file to be downloaded
+
+```{r download url}
+fileurl = "http://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+```
+
+### create temporary directory to hold temporary file
+
+```{r temporary directory}
+tempdir = tempdir()
+```
+ 
+### create temporary zip file
+
+```{r temporary file}
+temp <- tempfile(tmpdir = tempdir, fileext = ".zip")
+```
+
+### download file into temp folder
+
+```{r download}
+download.file(fileurl, destfile = temp, method = "curl")
+```
+
+### create a list of files within zip **unnesseccary step but interesting feature of unzip
+
+```{r list files}
+files <- unzip(temp, list=TRUE)
+```
+
+### if data folder does not exist within the working directory create it, in current working directory.
+
+```{r create dir data}
+if (!file.exists("data")){dir.create("data")}
+```
+
+### Unzip contents into new data folder within working directory
+
+```{r unzip data}
+unzip(temp, exdir = "./data", overwrite = TRUE)
+```
+
+### unlink temporary files and directory
+```{r unlink}
+unlink(temp)
+unlink(tempdir)
+```
+
+# Part 2 - Read data and merge test and training sets
+
+
+
+# Make codebook.
+# Data in this dataset has been divided by its range, normalizing the dataset, ie. it has no units.
+```{r  CodeBook}
+knit("CodeBook.Rmd", output="CodeBook.md", encoding="ISO8859-1", quiet=TRUE)
+markdownToHTML("CodeBook.md", "CodeBook.html")
+```
