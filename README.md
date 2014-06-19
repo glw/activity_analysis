@@ -55,4 +55,4 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 ## Output of run_analysis.Rmd:
 
 * activity_analysis_tidy_dataset.txt (tab delimited text)
-* CookBook.md **I have inlcuded my CookBook.md output within the repo for convenience.**
+* CookBook.md **(I have inlcuded my CookBook.md output within the repo for convenience.)**
