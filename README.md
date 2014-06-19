@@ -44,15 +44,15 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
      
        `setwd("your\path\to\cloned\directory")`
      
-       `source("run_analysis.R")`
+       `source("run_analysis.Rmd")`
 
 + To run from linux commandline...
 
        `cd your\path\to\cloned\directory`
      
-       `R CMD BATCH run_analysis.R`
+       `R CMD BATCH run_analysis.Rmd`
 
 ## Output of run_analysis.Rmd:
 
 * activity_analysis_tidy_dataset.txt (tab delimited text)
-* CookBook.md
+* CookBook.md **I have inlcuded my CookBook.md output within the repo for convenience.**
