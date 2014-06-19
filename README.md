@@ -1,7 +1,9 @@
 # activity_analysis
 
 Created by Garret Wais for Cousera class "Getting and Cleaning Data". 
+
 R version 3.1.0 (2014-04-10)
+
 Date created 4/16/2014
 
 ## Project Description:
