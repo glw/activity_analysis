@@ -13,7 +13,7 @@ Created by Garret Wais https://github.com/glw/activity_analysis
 
 # Part 1 - Download and extract data.
 
-### file to be downloaded
+### Large file to be downloaded into a temporary folder within users computer and unzipped into ./data folder
 
 ```{r download url}
 fileurl = "http://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
@@ -37,10 +37,11 @@ temp <- tempfile(tmpdir = tempdir, fileext = ".zip")
 download.file(fileurl, destfile = temp, method = "curl")
 ```
 
-### create a list of files within zip **unnesseccary step but interesting feature of unzip
+### create a list of files within zip
 
 ```{r list files}
 files <- unzip(temp, list=TRUE)
+files
 ```
 
 ### if data folder does not exist within the working directory create it, in current working directory.

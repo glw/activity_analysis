@@ -38,7 +38,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 3. From within cloned directory run `run_analysis.Rmd`, this will:
  * Download datafile zip from the source
  * run the analysis
- * and create CookBook.md
+ * and create CodeBook.md
 
 + To run from R or Rstudio on windows, mac, linux...
 
@@ -57,4 +57,5 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 ## Output of run_analysis.Rmd:
 
 * activity_analysis_tidy_dataset.txt (tab delimited text)
-* CookBook.md **(I have inlcuded myCookBook.md output within the repo for convenience.)**
+* CodeBook.md **(I have inlcuded myCodeBook.md output within the repo for convenience.)**
+* CodeBook.html
