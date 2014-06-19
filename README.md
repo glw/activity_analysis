@@ -24,18 +24,17 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 6. Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
 
 ###Run analysis:
-1. download repo. `git clone https://github.com/glw/activity_analysis.git`
-2. read [codebook.md](https://github.com/glw/activity_analysis/blob/master/CodeBook.md)
-3. from within cloned directory run `run_analysis.R`, this will:
- * download datafile zip and run the analysis.
-  * Run from R/Rstudio on windows, mac, linux:
-     Open R or Rstudio set your working directory `setwd("your\path\to\cloned\directory")`
-     
-     run analysis `source("run_analysis.R")`
+1. Download repo. `git clone https://github.com/glw/activity_analysis.git`
+2. Read [codebook.md](https://github.com/glw/activity_analysis/blob/master/CodeBook.md)
+3. From within cloned directory run `run_analysis.R`, this will:
+ * Download datafile zip and run the analysis.
+* Run from R/Rstudio on windows, mac, linux:
+     Open R or Rstudio and set your working directory 
+     `setwd("your\path\to\cloned\directory")`
+     `source("run_analysis.R")`
 
- * Run from linux commandline
+* Run from linux commandline
      `cd your\path\to\cloned\directory`
-     
      `R CMD BATCH run_analysis.R`
 
 ###Final Analysis Output:
