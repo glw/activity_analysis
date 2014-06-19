@@ -27,14 +27,14 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 1. download repo. `git clone https://github.com/glw/activity_analysis.git`
 2. read [codebook.md](https://github.com/glw/activity_analysis/blob/master/CodeBook.md).
 3. from within cloned directory run `run_analysis.R`, this will:
-..* download datafile zip and run the analysis.
-...* Run from R/Rstudio on windows, mac, linux:
-.... Open R or Rstudio set your working directory `setwd("your\path\to\cloned\directory")
-.... run analysis `source("run_analysis.R")
+ * download datafile zip and run the analysis.
+  * Run from R/Rstudio on windows, mac, linux:
+     Open R or Rstudio set your working directory `setwd("your\path\to\cloned\directory")
+     run analysis `source("run_analysis.R")
 
-...* Run from linux commandline
-.... `cd your\path\to\cloned\directory`
-.... `R CMD BATCH run_analysis.R`
+ * Run from linux commandline
+     `cd your\path\to\cloned\directory`
+     `R CMD BATCH run_analysis.R`
 
 ###Final Analyssis Output:
 * activity_analysis_tidy_dataset.txt (tab delimited text)
