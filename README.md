@@ -31,12 +31,14 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
   Can be installed using `install.packages()` command.
 
-2. Download repo. `git clone https://github.com/glw/activity_analysis.git`
-3. From within cloned directory run `run_analysis.Rmd`, this will:
- * Download datafile zip from the sourceand run the analysis.
-4. Read [codebook.md](https://github.com/glw/activity_analysis/blob/master/CodeBook.md) to understand what the dataset looks like
+2. Download repo in commmand line using: `git clone https://github.com/glw/activity_analysis.git`
 
-* To run from R or Rstudio on windows, mac, linux...
+3. From within cloned directory run `run_analysis.Rmd`, this will:
+ * Download datafile zip from the source
+ * run the analysis
+ * and create CookBook.md
+
++ To run from R or Rstudio on windows, mac, linux...
 
      * Open R or Rstudio and set your working directory 
      
@@ -44,7 +46,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
      
        `source("run_analysis.R")`
 
-* To run from linux commandline...
++ To run from linux commandline...
 
        `cd your\path\to\cloned\directory`
      
