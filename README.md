@@ -27,6 +27,10 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 ## To run analysis:
 
+### Make sure both run_analysis.R, and run_analysis.Rmd are in the same folder.
+      
+     **run_analysis.R** calls **run_analysis.Rmd** and dynamically creates a new **CodeBook.md**
+
 1. Required R packages:
  * knitr
  * markdown
@@ -57,5 +61,4 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 ## Output of run_analysis.Rmd:
 
 * activity_analysis_tidy_dataset.txt (tab delimited text)
-* CodeBook.md **(I have inlcuded myCodeBook.md output within the repo for convenience.)**
-* CodeBook.html
+* CodeBook.md **(I have inlcuded my CodeBook.md output within the repo for convenience and as required by course instructions.)**

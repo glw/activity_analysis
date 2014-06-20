@@ -67,8 +67,6 @@ unlink(tempdir)
 
 
 # Make codebook.
-# Data in this dataset has been divided by its range, normalizing the dataset, ie. it has no units.
-```{r  CodeBook}
-knit("CodeBook.Rmd", output="CodeBook.md", encoding="ISO8859-1", quiet=TRUE)
-markdownToHTML("CodeBook.md", "CodeBook.html")
-```
+  Data in this dataset has been divided by its range, normalizing the dataset, ie. it has no units.
+  
+  CodeBook.md has been produced...
