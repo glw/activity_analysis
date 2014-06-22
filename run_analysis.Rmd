@@ -11,7 +11,7 @@ Please see readme.md and codebook.md for further details
 Created by Garret Wais https://github.com/glw/activity_analysis
 
 
-# Part 1 - Download and extract data.
+# Part 1 of 2 - Download and extract data.
 
 ### Large file to be downloaded into a temporary folder within users computer and unzipped into ./data folder
 
@@ -62,11 +62,67 @@ unlink(temp)
 unlink(tempdir)
 ```
 
-# Part 2 - Read data and merge test and training sets
+# Part 2 of 2 - Read data and merge test and training sets
 
+    Read tables
+```{r}
+ytest <- read.table("./data/UCI HAR Dataset/test/y_test.txt", header = F)
+xtest <- read.table("./data/UCI HAR Dataset/test/X_test.txt", header = F)
+xtrain <- read.table("./data/UCI HAR Dataset/train/X_train.txt", header = F)
+ytrain <- read.table("./data/UCI HAR Dataset/train/y_train.txt", header = F)
+subjtrain <- read.table("./data/UCI HAR Dataset/train/subject_train.txt", header = F)
+colnames(sub)
+subjtest <- read.table("./data/UCI HAR Dataset/test/subject_test.txt", header = F)
+features <- read.table("./data/UCI HAR Dataset/features.txt", header = F)
+activities <- read.table("./data/UCI HAR Dataset/activity_labels.txt", header = F)
+```
 
+    Merging datasets
+```{r}
+X.df <- rbind(xtest, xtrain)
+
+Y.df <- rbind(ytest, ytrain)
+
+Subj.df <- rbind(subjtest, subjtrain)
+```
+
+    Keep Columns with "-mean" or "-std"
+```{r}
+keep_feat <- grep("-mean\\(\\)|-std\\(\\)", features[, 2])
+```
+
+    User activities to label Y.df
+```{r}
+Y.df[,1] = activities[Y.df[,1], 2]
+names(Y.df) <- "activity"
+```
+
+    Subset X.df with keep_feat and label columns *Used* headers from features to label Final tidy dataset headers 
+```{r}
+X.df <- X.df[, keep_feat]
+names(X.df) <- features[keep_feat, 2]
+names(X.df) <- gsub("\\(|\\)", "", names(X.df))
+```
+
+    Bind data sets and eport to tidy data file
+```{r}
+names(Subj.df) <- "Subject"
+final_set <- cbind(Subj.df, Y.df, X.df)
+write.table(final_set, "tidy_dataset.txt")
+```
+
+    Summary: tidy_dataset.txt
+```{r}
+tidy <- read.table("tidy_dataset.txt")
+summary(tidy)
+```
+
+    Head: tidy_dataset.txt
+```{r}
+head(tidy)
+```
 
 # Make codebook.
-  Data in this dataset has been divided by its range, normalizing the dataset, ie. it has no units.
+  **Data in this dataset has been divided by its range, normalizing the dataset, ie. it has no units.**
   
   CodeBook.md has been produced...

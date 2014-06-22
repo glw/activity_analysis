@@ -27,6 +27,8 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 ## To run analysis:
 
+### Set working directory in run_analysis.R to your users working directory.
+
 ### Make sure both run_analysis.R, and run_analysis.Rmd are in the same folder.
       
      **run_analysis.R** calls **run_analysis.Rmd** and dynamically creates a new **CodeBook.md**
