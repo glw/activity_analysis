@@ -41,7 +41,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 2. Download repo in commmand line using: `git clone https://github.com/glw/activity_analysis.git`
 
-3. From within cloned directory run `run_analysis.Rmd`, this will:
+3. From within cloned directory run `run_analysis.R`, this will:
  * Download datafile zip from the source
  * run the analysis
  * and create CodeBook.md
