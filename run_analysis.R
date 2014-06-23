@@ -9,8 +9,8 @@ usePackage("knitr")
 usePackage("markdown")
 
 
-#set working directory as current directory
-#setwd("/home/garret/projects/classes/coursera/GettingAndCleaningData/classProject/activity_analysis")
+#YOU MUST SET WORKING DIRECTORY FOR SCRIPT TO WORK
+setwd("/path/to/working/directory")
 
 #check to make sure run_analysis.Rmd exsists
 stopifnot(file.exists('run_analysis.Rmd'))
